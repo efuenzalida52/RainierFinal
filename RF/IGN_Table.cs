@@ -23,5 +23,7 @@ namespace hw7
         public Nullable<int> Year { get; set; }
         public Nullable<int> Month { get; set; }
         public Nullable<int> Day { get; set; }
+    
+        public virtual VGSales_Table VGSales_Table { get; set; }
     }
 }

@@ -29,5 +29,7 @@ namespace hw7
         public string Average_Playtime { get; set; }
         public string Developer_s_ { get; set; }
         public string Publisher_s_ { get; set; }
+    
+        public virtual VGSales_Table VGSales_Table { get; set; }
     }
 }

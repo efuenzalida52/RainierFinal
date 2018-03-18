@@ -241,6 +241,8 @@
     <Content Include="Views\Home\Q4.cshtml" />
     <Content Include="Views\Home\Q5.cshtml" />
     <Content Include="Views\Home\Q6.cshtml" />
+    <Content Include="Views\Home\Q7.cshtml" />
+    <Content Include="Views\Home\Q8.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

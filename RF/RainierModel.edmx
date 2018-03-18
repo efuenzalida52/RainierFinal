@@ -56,10 +56,42 @@
           <Property Name="Other_Sales" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Global_Sales" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
+        <Association Name="FK_IGN_Table_VGSales_Table">
+          <End Role="VGSales_Table" Type="Self.VGSales_Table" Multiplicity="0..1" />
+          <End Role="IGN_Table" Type="Self.IGN_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VGSales_Table">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="IGN_Table">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Steamspy_Table_VGSales_Table">
+          <End Role="VGSales_Table" Type="Self.VGSales_Table" Multiplicity="0..1" />
+          <End Role="Steamspy_Table" Type="Self.Steamspy_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VGSales_Table">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="Steamspy_Table">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="RainerModelStoreContainer">
           <EntitySet Name="IGN_Table" EntityType="Self.IGN_Table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Steamspy_Table" EntityType="Self.Steamspy_Table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VGSales_Table" EntityType="Self.VGSales_Table" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_IGN_Table_VGSales_Table" Association="Self.FK_IGN_Table_VGSales_Table">
+            <End Role="VGSales_Table" EntitySet="VGSales_Table" />
+            <End Role="IGN_Table" EntitySet="IGN_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Steamspy_Table_VGSales_Table" Association="Self.FK_Steamspy_Table_VGSales_Table">
+            <End Role="VGSales_Table" EntitySet="VGSales_Table" />
+            <End Role="Steamspy_Table" EntitySet="Steamspy_Table" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -79,6 +111,7 @@
           <Property Name="Year" Type="Int32" />
           <Property Name="Month" Type="Int32" />
           <Property Name="Day" Type="Int32" />
+          <NavigationProperty Name="VGSales_Table" Relationship="Self.FK_IGN_Table_VGSales_Table" FromRole="IGN_Table" ToRole="VGSales_Table" />
         </EntityType>
         <EntityType Name="Steamspy_Table">
           <Key>
@@ -99,6 +132,7 @@
           <Property Name="Average_Playtime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Developer_s_" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Publisher_s_" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VGSales_Table" Relationship="Self.FK_Steamspy_Table_VGSales_Table" FromRole="Steamspy_Table" ToRole="VGSales_Table" />
         </EntityType>
         <EntityType Name="VGSales_Table">
           <Key>
@@ -116,11 +150,45 @@
           <Property Name="JP_Sales" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Other_Sales" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Global_Sales" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="IGN_Table" Relationship="Self.FK_IGN_Table_VGSales_Table" FromRole="VGSales_Table" ToRole="IGN_Table" />
+          <NavigationProperty Name="Steamspy_Table" Relationship="Self.FK_Steamspy_Table_VGSales_Table" FromRole="VGSales_Table" ToRole="Steamspy_Table" />
         </EntityType>
+        <Association Name="FK_IGN_Table_VGSales_Table">
+          <End Role="VGSales_Table" Type="Self.VGSales_Table" Multiplicity="0..1" />
+          <End Role="IGN_Table" Type="Self.IGN_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VGSales_Table">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="IGN_Table">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Steamspy_Table_VGSales_Table">
+          <End Role="VGSales_Table" Type="Self.VGSales_Table" Multiplicity="0..1" />
+          <End Role="Steamspy_Table" Type="Self.Steamspy_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VGSales_Table">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="Steamspy_Table">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="RainerEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="IGN_Table" EntityType="Self.IGN_Table" />
           <EntitySet Name="Steamspy_Table" EntityType="Self.Steamspy_Table" />
           <EntitySet Name="VGSales_Table" EntityType="Self.VGSales_Table" />
+          <AssociationSet Name="FK_IGN_Table_VGSales_Table" Association="Self.FK_IGN_Table_VGSales_Table">
+            <End Role="VGSales_Table" EntitySet="VGSales_Table" />
+            <End Role="IGN_Table" EntitySet="IGN_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Steamspy_Table_VGSales_Table" Association="Self.FK_Steamspy_Table_VGSales_Table">
+            <End Role="VGSales_Table" EntitySet="VGSales_Table" />
+            <End Role="Steamspy_Table" EntitySet="Steamspy_Table" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>

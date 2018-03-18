@@ -51,9 +51,41 @@
     <Property Name="Other_Sales" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Global_Sales" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
+  <Association Name="FK_IGN_Table_VGSales_Table">
+    <End Role="VGSales_Table" Type="Self.VGSales_Table" Multiplicity="0..1" />
+    <End Role="IGN_Table" Type="Self.IGN_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VGSales_Table">
+        <PropertyRef Name="GameID" />
+      </Principal>
+      <Dependent Role="IGN_Table">
+        <PropertyRef Name="GameID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Steamspy_Table_VGSales_Table">
+    <End Role="VGSales_Table" Type="Self.VGSales_Table" Multiplicity="0..1" />
+    <End Role="Steamspy_Table" Type="Self.Steamspy_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VGSales_Table">
+        <PropertyRef Name="GameID" />
+      </Principal>
+      <Dependent Role="Steamspy_Table">
+        <PropertyRef Name="GameID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="RainerModelStoreContainer">
     <EntitySet Name="IGN_Table" EntityType="Self.IGN_Table" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Steamspy_Table" EntityType="Self.Steamspy_Table" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VGSales_Table" EntityType="Self.VGSales_Table" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_IGN_Table_VGSales_Table" Association="Self.FK_IGN_Table_VGSales_Table">
+      <End Role="VGSales_Table" EntitySet="VGSales_Table" />
+      <End Role="IGN_Table" EntitySet="IGN_Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Steamspy_Table_VGSales_Table" Association="Self.FK_Steamspy_Table_VGSales_Table">
+      <End Role="VGSales_Table" EntitySet="VGSales_Table" />
+      <End Role="Steamspy_Table" EntitySet="Steamspy_Table" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

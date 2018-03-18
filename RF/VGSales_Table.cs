@@ -14,6 +14,12 @@ namespace hw7
     
     public partial class VGSales_Table
     {
+        public VGSales_Table()
+        {
+            this.IGN_Table = new HashSet<IGN_Table>();
+            this.Steamspy_Table = new HashSet<Steamspy_Table>();
+        }
+    
         public int GameID { get; set; }
         public Nullable<int> Rank { get; set; }
         public string Title { get; set; }
@@ -26,5 +32,8 @@ namespace hw7
         public Nullable<decimal> JP_Sales { get; set; }
         public Nullable<decimal> Other_Sales { get; set; }
         public Nullable<decimal> Global_Sales { get; set; }
+    
+        public virtual ICollection<IGN_Table> IGN_Table { get; set; }
+        public virtual ICollection<Steamspy_Table> Steamspy_Table { get; set; }
     }
 }

@@ -589,7 +589,7 @@ public class TypeMapper
         ArgumentNotNull(types, "types");
         ArgumentNotNull(sourceFile, "sourceFile");
         
-        var hash = new HashSet<string>(StringComparer.InvariantCultureIGN_TableoreCase);
+        var hash = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
         if (types.Any(item => !hash.Add(item)))
         {
             _errors.Add(
@@ -833,7 +833,7 @@ public static void ArgumentNotNull<T>(T arg, string name) where T : class
     
 private static readonly Lazy<System.Resources.ResourceManager> ResourceManager =
     new Lazy<System.Resources.ResourceManager>(
-        () => new System.Resources.ResourceManager("System.Data.Entity.DesIGN_Table", typeof(MetadataItemCollectionFactory).Assembly), isThreadSafe: true);
+        () => new System.Resources.ResourceManager("System.Data.Entity.Design", typeof(MetadataItemCollectionFactory).Assembly), isThreadSafe: true);
 
 public static string GetResourceString(string resourceName)
 {
