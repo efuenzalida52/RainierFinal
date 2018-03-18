@@ -1,57 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="RainierFinal" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="ign">
+<Schema Namespace="RainerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="IGN_Table">
     <Key>
-      <PropertyRef Name="Title" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Double" Nullable="false" />
-    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GameID" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Platform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Score" Type="Double" />
-    <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Year" Type="Double" />
-    <Property Name="Month" Type="Double" />
-    <Property Name="Day" Type="Double" />
+    <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Day" Type="Int32" />
   </EntityType>
-  <EntityType Name="steamspy">
+  <EntityType Name="Steamspy_Table">
     <Key>
-      <PropertyRef Name="Title" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Double" Nullable="false" />
-    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Month" Type="Double" />
-    <Property Name="Day" Type="Double" />
-    <Property Name="Year" Type="Double" />
+    <Property Name="GameID" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Platform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Day" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
     <Property Name="Price" Type="Double" />
     <Property Name="Average_Score_Rank" Type="Double" />
     <Property Name="User_Score" Type="Double" />
     <Property Name="Metacritic_Score" Type="Double" />
-    <Property Name="Estimated_Owners" Type="Double" />
-    <Property Name="Average_Playtime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Developer_s_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Publisher_s_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Game_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Estimated_Owners" Type="Int32" />
+    <Property Name="Average_Playtime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Developer_s_" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Publisher_s_" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="vg">
+  <EntityType Name="VGSales_Table">
     <Key>
-      <PropertyRef Name="Title" />
+      <PropertyRef Name="GameID" />
     </Key>
-    <Property Name="ID" Type="Double" Nullable="false" />
-    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Year" Type="Double" Nullable="false" />
-    <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Publisher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="NA_Sales" Type="Double" />
-    <Property Name="EU_Sales" Type="Double" />
-    <Property Name="JP_Sales" Type="Double" />
-    <Property Name="Other_Sales" Type="Double" />
-    <Property Name="Global_Sales" Type="Double" />
+    <Property Name="GameID" Type="Int32" Nullable="false" />
+    <Property Name="Rank" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Platform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NA_Sales" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EU_Sales" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="JP_Sales" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Other_Sales" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Global_Sales" Type="Decimal" Precision="18" Scale="0" />
   </EntityType>
-  <EntityContainer Name="RainierEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="igns" EntityType="Self.ign" />
-    <EntitySet Name="steamspies" EntityType="Self.steamspy" />
-    <EntitySet Name="vgs" EntityType="Self.vg" />
+  <EntityContainer Name="RainerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="IGN_Table" EntityType="Self.IGN_Table" />
+    <EntitySet Name="Steamspy_Table" EntityType="Self.Steamspy_Table" />
+    <EntitySet Name="VGSales_Table" EntityType="Self.VGSales_Table" />
   </EntityContainer>
 </Schema>

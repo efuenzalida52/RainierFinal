@@ -152,7 +152,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ign.cs">
+    <Compile Include="IGN_Table.cs">
       <DependentUpon>RainierModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,10 +171,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RainierModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="steamspy.cs">
+    <Compile Include="Steamspy_Table.cs">
       <DependentUpon>RainierModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="vg.cs">
+    <Compile Include="VGSales_Table.cs">
       <DependentUpon>RainierModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -200,6 +200,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\RainierFinal - Web Deploy.pubxml" />
     <EntityDeploy Include="RainierModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RainierModel.Designer.cs</LastGenOutput>
@@ -207,7 +208,6 @@
     <Content Include="RainierModel.edmx.diagram">
       <DependentUpon>RainierModel.edmx</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\RainierFinal - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

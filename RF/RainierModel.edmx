@@ -4,129 +4,134 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RainierFinal.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="ign">
+      <Schema Namespace="RainerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IGN_Table">
           <Key>
-            <PropertyRef Name="Title" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="float" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Platform" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Platform" Type="nvarchar" MaxLength="50" />
           <Property Name="Score" Type="float" />
-          <Property Name="Genre" Type="nvarchar" MaxLength="255" />
-          <Property Name="Year" Type="float" />
-          <Property Name="Month" Type="float" />
-          <Property Name="Day" Type="float" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Day" Type="int" />
         </EntityType>
-        <EntityType Name="steamspy">
+        <EntityType Name="Steamspy_Table">
           <Key>
-            <PropertyRef Name="Title" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="float" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Platform" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Month" Type="float" />
-          <Property Name="Day" Type="float" />
-          <Property Name="Year" Type="float" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Platform" Type="nvarchar" MaxLength="50" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Day" Type="int" />
+          <Property Name="Year" Type="int" />
           <Property Name="Price" Type="float" />
           <Property Name="Average Score Rank" Type="float" />
           <Property Name="User Score" Type="float" />
           <Property Name="Metacritic Score" Type="float" />
-          <Property Name="Estimated Owners" Type="float" />
-          <Property Name="Average Playtime" Type="nvarchar" MaxLength="255" />
-          <Property Name="Developer(s)" Type="nvarchar" MaxLength="255" />
-          <Property Name="Publisher(s)" Type="nvarchar" MaxLength="255" />
-          <Property Name="Game ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Estimated Owners" Type="int" />
+          <Property Name="Average Playtime" Type="nvarchar(max)" />
+          <Property Name="Developer(s)" Type="nvarchar(max)" />
+          <Property Name="Publisher(s)" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="vg">
+        <EntityType Name="VGSales_Table">
           <Key>
-            <PropertyRef Name="Title" />
+            <PropertyRef Name="GameID" />
           </Key>
-          <Property Name="ID" Type="float" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Platform" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Year" Type="float" Nullable="false" />
-          <Property Name="Genre" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Publisher" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="NA_Sales" Type="float" />
-          <Property Name="EU_Sales" Type="float" />
-          <Property Name="JP_Sales" Type="float" />
-          <Property Name="Other_Sales" Type="float" />
-          <Property Name="Global_Sales" Type="float" />
+          <Property Name="GameID" Type="int" Nullable="false" />
+          <Property Name="Rank" Type="int" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Platform" Type="nvarchar" MaxLength="50" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="50" />
+          <Property Name="Publisher" Type="nvarchar" MaxLength="50" />
+          <Property Name="NA_Sales" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="EU_Sales" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="JP_Sales" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Other_Sales" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Global_Sales" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
-        <EntityContainer Name="RainierFinalStoreContainer">
-          <EntitySet Name="ign" EntityType="Self.ign" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="steamspy" EntityType="Self.steamspy" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="vg" EntityType="Self.vg" Schema="dbo" store:Type="Tables" />
+        <EntityContainer Name="RainerModelStoreContainer">
+          <EntitySet Name="IGN_Table" EntityType="Self.IGN_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Steamspy_Table" EntityType="Self.Steamspy_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VGSales_Table" EntityType="Self.VGSales_Table" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="RainierFinal" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="ign">
+      <Schema Namespace="RainerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IGN_Table">
           <Key>
-            <PropertyRef Name="Title" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Double" Nullable="false" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Platform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Score" Type="Double" />
-          <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Year" Type="Double" />
-          <Property Name="Month" Type="Double" />
-          <Property Name="Day" Type="Double" />
+          <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Day" Type="Int32" />
         </EntityType>
-        <EntityType Name="steamspy">
+        <EntityType Name="Steamspy_Table">
           <Key>
-            <PropertyRef Name="Title" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Double" Nullable="false" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Month" Type="Double" />
-          <Property Name="Day" Type="Double" />
-          <Property Name="Year" Type="Double" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Platform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Day" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
           <Property Name="Price" Type="Double" />
           <Property Name="Average_Score_Rank" Type="Double" />
           <Property Name="User_Score" Type="Double" />
           <Property Name="Metacritic_Score" Type="Double" />
-          <Property Name="Estimated_Owners" Type="Double" />
-          <Property Name="Average_Playtime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Developer_s_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Publisher_s_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Game_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Estimated_Owners" Type="Int32" />
+          <Property Name="Average_Playtime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Developer_s_" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Publisher_s_" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="vg">
+        <EntityType Name="VGSales_Table">
           <Key>
-            <PropertyRef Name="Title" />
+            <PropertyRef Name="GameID" />
           </Key>
-          <Property Name="ID" Type="Double" Nullable="false" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Year" Type="Double" Nullable="false" />
-          <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Publisher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NA_Sales" Type="Double" />
-          <Property Name="EU_Sales" Type="Double" />
-          <Property Name="JP_Sales" Type="Double" />
-          <Property Name="Other_Sales" Type="Double" />
-          <Property Name="Global_Sales" Type="Double" />
+          <Property Name="GameID" Type="Int32" Nullable="false" />
+          <Property Name="Rank" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Platform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NA_Sales" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EU_Sales" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="JP_Sales" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Other_Sales" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Global_Sales" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
-        <EntityContainer Name="RainierEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="igns" EntityType="Self.ign" />
-          <EntitySet Name="steamspies" EntityType="Self.steamspy" />
-          <EntitySet Name="vgs" EntityType="Self.vg" />
+        <EntityContainer Name="RainerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IGN_Table" EntityType="Self.IGN_Table" />
+          <EntitySet Name="Steamspy_Table" EntityType="Self.Steamspy_Table" />
+          <EntitySet Name="VGSales_Table" EntityType="Self.VGSales_Table" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="RainierFinalStoreContainer" CdmEntityContainer="RainierEntities">
-          <EntitySetMapping Name="igns">
-            <EntityTypeMapping TypeName="RainierFinal.ign">
-              <MappingFragment StoreEntitySet="ign">
+        <EntityContainerMapping StorageEntityContainer="RainerModelStoreContainer" CdmEntityContainer="RainerEntities">
+          <EntitySetMapping Name="IGN_Table">
+            <EntityTypeMapping TypeName="RainerModel.IGN_Table">
+              <MappingFragment StoreEntitySet="IGN_Table">
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Platform" ColumnName="Platform" />
@@ -138,9 +143,10 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="steamspies">
-            <EntityTypeMapping TypeName="RainierFinal.steamspy">
-              <MappingFragment StoreEntitySet="steamspy">
+          <EntitySetMapping Name="Steamspy_Table">
+            <EntityTypeMapping TypeName="RainerModel.Steamspy_Table">
+              <MappingFragment StoreEntitySet="Steamspy_Table">
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Platform" ColumnName="Platform" />
@@ -155,14 +161,14 @@
                 <ScalarProperty Name="Average_Playtime" ColumnName="Average Playtime" />
                 <ScalarProperty Name="Developer_s_" ColumnName="Developer(s)" />
                 <ScalarProperty Name="Publisher_s_" ColumnName="Publisher(s)" />
-                <ScalarProperty Name="Game_ID" ColumnName="Game ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="vgs">
-            <EntityTypeMapping TypeName="RainierFinal.vg">
-              <MappingFragment StoreEntitySet="vg">
-                <ScalarProperty Name="ID" ColumnName="ID" />
+          <EntitySetMapping Name="VGSales_Table">
+            <EntityTypeMapping TypeName="RainerModel.VGSales_Table">
+              <MappingFragment StoreEntitySet="VGSales_Table">
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Platform" ColumnName="Platform" />
                 <ScalarProperty Name="Year" ColumnName="Year" />

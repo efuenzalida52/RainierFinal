@@ -1062,7 +1062,7 @@ window.Modernizr = (function( window, document, undefined ) {
             supportsHtml5Styles = ('hidden' in a);
 
             supportsUnknownElements = a.childNodes.length == 1 || (function() {
-              // assign a false positive if unable to shiv
+              // assIGN_Table a false positive if unable to shiv
               (document.createElement)('a');
               var frag = document.createDocumentFragment();
               return (
@@ -1317,7 +1317,7 @@ window.Modernizr = (function( window, document, undefined ) {
     }(this, document));
     /*>>shiv*/
 
-    // Assign private properties to the return object with prefix
+    // AssIGN_Table private properties to the return object with prefix
     Modernizr._version      = version;
 
     // expose these for the plugin API. Look in the source for how to join() them against your input

@@ -15,7 +15,7 @@
 /*
 * This file has been commented to support Visual Studio Intellisense.
 * You should not use this file at runtime inside the browser--it is only
-* intended to be used only for design-time IntelliSense.  Please use the
+* intended to be used only for desIGN_Table-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
 * Comment version: 1.11.1
@@ -278,8 +278,8 @@ $.extend($.validator, {
 		errorContainer: $( [] ),
 		errorLabelContainer: $( [] ),
 		onsubmit: true,
-		ignore: [],
-		ignoreTitle: false,
+		IGN_Tableore: [],
+		IGN_TableoreTitle: false,
 		onfocusin: function(element) {
 			this.lastActive = element;
 				
@@ -528,7 +528,7 @@ $.extend($.validator, {
 					// manually trigger focusin event; without it, focusin handler isn't called, findLastActive won't have anything to find
 					.trigger("focusin");
 				} catch(e) {
-					// ignore IE throwing errors when focusing hidden elements
+					// IGN_Tableore IE throwing errors when focusing hidden elements
 				}
 			}
 		},
@@ -549,9 +549,9 @@ $.extend($.validator, {
 			return $([]).add(this.currentForm.elements)
 			.filter(":input")
 			.not(":submit, :reset, :image, [disabled]")
-			.not( this.settings.ignore )
+			.not( this.settings.IGN_Tableore )
 			.filter(function() {
-				!this.name && validator.settings.debug && window.console && console.error( "%o has no name assigned", this);
+				!this.name && validator.settings.debug && window.console && console.error( "%o has no name assIGN_Tableed", this);
 			
 				// select only the first element for each name, and only those with rules specified
 				if ( this.name in rulesCache || !validator.objectLength($(this).rules()) )
@@ -594,7 +594,7 @@ $.extend($.validator, {
 			
 			// if radio/checkbox, validate first element in group instead
 			if (this.checkable(element)) {
-			    element = this.findByName(element.name).not(this.settings.ignore)[0];
+			    element = this.findByName(element.name).not(this.settings.IGN_Tableore)[0];
 			}
 			
 			var rules = $(element).rules();
@@ -669,7 +669,7 @@ $.extend($.validator, {
 				this.customMessage( element.name, method ),
 				this.customMetaMessage( element, method ),
 				// title is never undefined, so handle empty string as undefined
-				!this.settings.ignoreTitle && element.title || undefined,
+				!this.settings.IGN_TableoreTitle && element.title || undefined,
 				$.validator.messages[method],
 				"<strong>Warning: No message defined for " + element.name + "</strong>"
 			);
@@ -934,7 +934,7 @@ $.extend($.validator, {
 	normalizeRules: function(rules, element) {
 		// handle dependency check
 		$.each(rules, function(prop, val) {
-			// ignore rule when param is explicitly false, eg. required:false
+			// IGN_Tableore rule when param is explicitly false, eg. required:false
 			if (val === false) {
 				delete rules[prop];
 				return;
@@ -988,7 +988,7 @@ $.extend($.validator, {
 			}
 		}
 		
-		// To support custom messages in metadata ignore rule methods titled "messages"
+		// To support custom messages in metadata IGN_Tableore rule methods titled "messages"
 		if (rules.messages) {
 			delete rules.messages;
 		}

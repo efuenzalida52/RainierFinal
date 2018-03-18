@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="RainierFinalStoreContainer" CdmEntityContainer="RainierEntities">
-    <EntitySetMapping Name="igns">
-      <EntityTypeMapping TypeName="RainierFinal.ign">
-        <MappingFragment StoreEntitySet="ign">
+  <EntityContainerMapping StorageEntityContainer="RainerModelStoreContainer" CdmEntityContainer="RainerEntities">
+    <EntitySetMapping Name="IGN_Table">
+      <EntityTypeMapping TypeName="RainerModel.IGN_Table">
+        <MappingFragment StoreEntitySet="IGN_Table">
+          <ScalarProperty Name="GameID" ColumnName="GameID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Platform" ColumnName="Platform" />
@@ -15,9 +16,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="steamspies">
-      <EntityTypeMapping TypeName="RainierFinal.steamspy">
-        <MappingFragment StoreEntitySet="steamspy">
+    <EntitySetMapping Name="Steamspy_Table">
+      <EntityTypeMapping TypeName="RainerModel.Steamspy_Table">
+        <MappingFragment StoreEntitySet="Steamspy_Table">
+          <ScalarProperty Name="GameID" ColumnName="GameID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Platform" ColumnName="Platform" />
@@ -32,14 +34,14 @@
           <ScalarProperty Name="Average_Playtime" ColumnName="Average Playtime" />
           <ScalarProperty Name="Developer_s_" ColumnName="Developer(s)" />
           <ScalarProperty Name="Publisher_s_" ColumnName="Publisher(s)" />
-          <ScalarProperty Name="Game_ID" ColumnName="Game ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="vgs">
-      <EntityTypeMapping TypeName="RainierFinal.vg">
-        <MappingFragment StoreEntitySet="vg">
-          <ScalarProperty Name="ID" ColumnName="ID" />
+    <EntitySetMapping Name="VGSales_Table">
+      <EntityTypeMapping TypeName="RainerModel.VGSales_Table">
+        <MappingFragment StoreEntitySet="VGSales_Table">
+          <ScalarProperty Name="GameID" ColumnName="GameID" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Platform" ColumnName="Platform" />
           <ScalarProperty Name="Year" ColumnName="Year" />

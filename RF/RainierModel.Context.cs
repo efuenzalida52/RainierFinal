@@ -13,10 +13,10 @@ namespace hw7
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RainierEntities : DbContext
+    public partial class RainerEntities : DbContext
     {
-        public RainierEntities()
-            : base("name=RainierEntities")
+        public RainerEntities()
+            : base("name=RainerEntities")
         {
         }
     
@@ -25,8 +25,8 @@ namespace hw7
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<ign> igns { get; set; }
-        public DbSet<steamspy> steamspies { get; set; }
-        public DbSet<vg> vgs { get; set; }
+        public DbSet<IGN_Table> IGN_Table { get; set; }
+        public DbSet<Steamspy_Table> Steamspy_Table { get; set; }
+        public DbSet<VGSales_Table> VGSales_Table { get; set; }
     }
 }

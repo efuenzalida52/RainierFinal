@@ -12,18 +12,16 @@ namespace hw7
     using System;
     using System.Collections.Generic;
     
-    public partial class vg
+    public partial class IGN_Table
     {
-        public double ID { get; set; }
+        public Nullable<int> GameID { get; set; }
+        public int ID { get; set; }
         public string Title { get; set; }
         public string Platform { get; set; }
-        public double Year { get; set; }
+        public Nullable<double> Score { get; set; }
         public string Genre { get; set; }
-        public string Publisher { get; set; }
-        public Nullable<double> NA_Sales { get; set; }
-        public Nullable<double> EU_Sales { get; set; }
-        public Nullable<double> JP_Sales { get; set; }
-        public Nullable<double> Other_Sales { get; set; }
-        public Nullable<double> Global_Sales { get; set; }
+        public Nullable<int> Year { get; set; }
+        public Nullable<int> Month { get; set; }
+        public Nullable<int> Day { get; set; }
     }
 }
