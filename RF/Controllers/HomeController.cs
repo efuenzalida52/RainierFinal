@@ -116,7 +116,7 @@ namespace hw7.Controllers
             var query6 = (from VGSales_Table in model.VGSales_Table
                           //group vg.Genre by vg.Genre into Genre_Popularity
                           //orderby VGSales_Table.Genre.Count() descending
-                          //select VGSales_Table).Take(1);
+                          select VGSales_Table).Take(1);
 
                           //select VGSales_Table).GroupBy(VGSales_Table => VGSales_Table.Genre).Select(grp => new { Genre = grp.Key, Count = grp.Count() }).OrderBy(x => x.Genre);
 

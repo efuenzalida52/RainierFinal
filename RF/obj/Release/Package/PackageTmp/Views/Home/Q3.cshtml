@@ -1,0 +1,30 @@
+﻿@* The @model directive provides a cleaner and more concise way to reference
+    strongly-typed models from view files.*@
+@model IEnumerable<hw7.VGSales_Table>
+
+@{
+    ViewBag.Title = "Q3";
+}
+
+@{
+    string modelinfo = Model.ToString();
+}
+<h2>@ViewBag.Message</h2>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Publisher</th>
+        <th>Year</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+            <td>@Html.DisplayFor(modelItem => item.Publisher)</td>
+            <td>@Html.DisplayFor(modelItem => item.Year)</td>
+
+        </tr>
+    }
+</table>
+

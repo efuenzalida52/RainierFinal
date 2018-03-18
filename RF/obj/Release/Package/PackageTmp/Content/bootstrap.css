@@ -16,7 +16,7 @@
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Designed and built with all the love in the world by @mdo and @fat.
+ * DesIGN_Tableed and built with all the love in the world by @mdo and @fat.
  */
 
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
@@ -124,7 +124,7 @@ sup {
   position: relative;
   font-size: 75%;
   line-height: 0;
-  vertical-align: baseline;
+  vertical-alIGN_Table: baseline;
 }
 
 sup {
@@ -216,7 +216,7 @@ input::-moz-focus-inner {
 
 textarea {
   overflow: auto;
-  vertical-align: top;
+  vertical-alIGN_Table: top;
 }
 
 table {
@@ -352,7 +352,7 @@ a:focus {
 }
 
 img {
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
 }
 
 .img-responsive {
@@ -450,15 +450,15 @@ cite {
 }
 
 .text-left {
-  text-align: left;
+  text-alIGN_Table: left;
 }
 
 .text-right {
-  text-align: right;
+  text-alIGN_Table: right;
 }
 
 .text-center {
-  text-align: center;
+  text-alIGN_Table: center;
 }
 
 h1,
@@ -614,7 +614,7 @@ dd {
     width: 160px;
     overflow: hidden;
     clear: left;
-    text-align: right;
+    text-alIGN_Table: right;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -685,7 +685,7 @@ blockquote.pull-right {
 
 blockquote.pull-right p,
 blockquote.pull-right small {
-  text-align: right;
+  text-alIGN_Table: right;
 }
 
 blockquote.pull-right small:before {
@@ -1410,7 +1410,7 @@ table {
 }
 
 th {
-  text-align: left;
+  text-alIGN_Table: left;
 }
 
 .table {
@@ -1426,12 +1426,12 @@ th {
 .table tfoot > tr > td {
   padding: 8px;
   line-height: 1.428571429;
-  vertical-align: top;
+  vertical-alIGN_Table: top;
   border-top: 1px solid #dddddd;
 }
 
 .table thead > tr > th {
-  vertical-align: bottom;
+  vertical-alIGN_Table: bottom;
   border-bottom: 2px solid #dddddd;
 }
 
@@ -1724,7 +1724,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 14px;
   line-height: 1.428571429;
   color: #555555;
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border-radius: 4px;
@@ -1763,7 +1763,7 @@ textarea.form-control {
   padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
 }
 
 .radio label,
@@ -1793,7 +1793,7 @@ textarea.form-control {
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
   cursor: pointer;
 }
 
@@ -1937,7 +1937,7 @@ textarea.input-lg {
   .form-inline .form-group {
     display: inline-block;
     margin-bottom: 0;
-    vertical-align: middle;
+    vertical-alIGN_Table: middle;
   }
   .form-inline .form-control {
     display: inline-block;
@@ -1993,7 +1993,7 @@ textarea.input-lg {
 
 @media (min-width: 768px) {
   .form-horizontal .control-label {
-    text-align: right;
+    text-alIGN_Table: right;
   }
 }
 
@@ -2004,9 +2004,9 @@ textarea.input-lg {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.428571429;
-  text-align: center;
+  text-alIGN_Table: center;
   white-space: nowrap;
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -2503,7 +2503,7 @@ input[type="button"].btn-block {
   content: "\e017";
 }
 
-.glyphicon-signal:before {
+.glyphicon-sIGN_Tableal:before {
   content: "\e018";
 }
 
@@ -2627,19 +2627,19 @@ input[type="button"].btn-block {
   content: "\e051";
 }
 
-.glyphicon-align-left:before {
+.glyphicon-alIGN_Table-left:before {
   content: "\e052";
 }
 
-.glyphicon-align-center:before {
+.glyphicon-alIGN_Table-center:before {
   content: "\e053";
 }
 
-.glyphicon-align-right:before {
+.glyphicon-alIGN_Table-right:before {
   content: "\e054";
 }
 
-.glyphicon-align-justify:before {
+.glyphicon-alIGN_Table-justify:before {
   content: "\e055";
 }
 
@@ -2739,27 +2739,27 @@ input[type="button"].btn-block {
   content: "\e080";
 }
 
-.glyphicon-plus-sign:before {
+.glyphicon-plus-sIGN_Table:before {
   content: "\e081";
 }
 
-.glyphicon-minus-sign:before {
+.glyphicon-minus-sIGN_Table:before {
   content: "\e082";
 }
 
-.glyphicon-remove-sign:before {
+.glyphicon-remove-sIGN_Table:before {
   content: "\e083";
 }
 
-.glyphicon-ok-sign:before {
+.glyphicon-ok-sIGN_Table:before {
   content: "\e084";
 }
 
-.glyphicon-question-sign:before {
+.glyphicon-question-sIGN_Table:before {
   content: "\e085";
 }
 
-.glyphicon-info-sign:before {
+.glyphicon-info-sIGN_Table:before {
   content: "\e086";
 }
 
@@ -2807,7 +2807,7 @@ input[type="button"].btn-block {
   content: "\e097";
 }
 
-.glyphicon-exclamation-sign:before {
+.glyphicon-exclamation-sIGN_Table:before {
   content: "\e101";
 }
 
@@ -2827,7 +2827,7 @@ input[type="button"].btn-block {
   content: "\e106";
 }
 
-.glyphicon-warning-sign:before {
+.glyphicon-warning-sIGN_Table:before {
   content: "\e107";
 }
 
@@ -3216,7 +3216,7 @@ input[type="button"].btn-block {
   width: 0;
   height: 0;
   margin-left: 2px;
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
   border-top: 4px solid #000000;
   border-right: 4px solid transparent;
   border-bottom: 0 dotted;
@@ -3385,7 +3385,7 @@ input[type="button"].btn-block {
 .btn-group-vertical {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
 }
 
 .btn-group > .btn,
@@ -3709,7 +3709,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .input-group-btn {
   width: 1%;
   white-space: nowrap;
-  vertical-align: middle;
+  vertical-alIGN_Table: middle;
 }
 
 .input-group-addon {
@@ -3717,7 +3717,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  text-align: center;
+  text-alIGN_Table: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
   border-radius: 4px;
@@ -3897,7 +3897,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-tabs.nav-justified > li > a {
-  text-align: center;
+  text-alIGN_Table: center;
 }
 
 @media (min-width: 768px) {
@@ -3953,7 +3953,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-justified > li > a {
-  text-align: center;
+  text-alIGN_Table: center;
 }
 
 @media (min-width: 768px) {
@@ -4310,7 +4310,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-form .form-group {
     display: inline-block;
     margin-bottom: 0;
-    vertical-align: middle;
+    vertical-alIGN_Table: middle;
   }
   .navbar-form .form-control {
     display: inline-block;
@@ -4746,7 +4746,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .pager {
   padding-left: 0;
   margin: 20px 0;
-  text-align: center;
+  text-alIGN_Table: center;
   list-style: none;
 }
 
@@ -4815,9 +4815,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-weight: bold;
   line-height: 1;
   color: #ffffff;
-  text-align: center;
+  text-alIGN_Table: center;
   white-space: nowrap;
-  vertical-align: baseline;
+  vertical-alIGN_Table: baseline;
   border-radius: .25em;
 }
 
@@ -4894,9 +4894,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-weight: bold;
   line-height: 1;
   color: #ffffff;
-  text-align: center;
+  text-alIGN_Table: center;
   white-space: nowrap;
-  vertical-align: baseline;
+  vertical-alIGN_Table: baseline;
   background-color: #999999;
   border-radius: 10px;
 }
@@ -5143,7 +5143,7 @@ a.thumbnail:focus {
   height: 100%;
   font-size: 12px;
   color: #ffffff;
-  text-align: center;
+  text-alIGN_Table: center;
   background-color: #428bca;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
           box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -5701,7 +5701,7 @@ body.modal-open,
 .modal-footer {
   padding: 19px 20px 20px;
   margin-top: 15px;
-  text-align: right;
+  text-alIGN_Table: right;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -5792,7 +5792,7 @@ body.modal-open,
   max-width: 200px;
   padding: 3px 8px;
   color: #ffffff;
-  text-align: center;
+  text-alIGN_Table: center;
   text-decoration: none;
   background-color: #000000;
   border-radius: 4px;
@@ -5874,7 +5874,7 @@ body.modal-open,
   display: none;
   max-width: 276px;
   padding: 1px;
-  text-align: left;
+  text-alIGN_Table: left;
   white-space: normal;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -6074,7 +6074,7 @@ body.modal-open,
   width: 15%;
   font-size: 20px;
   color: #ffffff;
-  text-align: center;
+  text-alIGN_Table: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -6144,7 +6144,7 @@ body.modal-open,
   width: 60%;
   padding-left: 0;
   margin-left: -30%;
-  text-align: center;
+  text-alIGN_Table: center;
   list-style: none;
 }
 
@@ -6175,7 +6175,7 @@ body.modal-open,
   padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
-  text-align: center;
+  text-alIGN_Table: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 

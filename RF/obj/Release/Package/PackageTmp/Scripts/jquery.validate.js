@@ -236,8 +236,8 @@ $.extend($.validator, {
 		errorContainer: $([]),
 		errorLabelContainer: $([]),
 		onsubmit: true,
-		ignore: ":hidden",
-		ignoreTitle: false,
+		IGN_Tableore: ":hidden",
+		IGN_TableoreTitle: false,
 		onfocusin: function( element, event ) {
 			this.lastActive = element;
 
@@ -470,7 +470,7 @@ $.extend($.validator, {
 					// manually trigger focusin event; without it, focusin handler isn't called, findLastActive won't have anything to find
 					.trigger("focusin");
 				} catch(e) {
-					// ignore IE throwing errors when focusing hidden elements
+					// IGN_Tableore IE throwing errors when focusing hidden elements
 				}
 			}
 		},
@@ -490,10 +490,10 @@ $.extend($.validator, {
 			return $(this.currentForm)
 			.find("input, select, textarea")
 			.not(":submit, :reset, :image, [disabled]")
-			.not( this.settings.ignore )
+			.not( this.settings.IGN_Tableore )
 			.filter(function() {
 				if ( !this.name && validator.settings.debug && window.console ) {
-					console.error( "%o has no name assigned", this);
+					console.error( "%o has no name assIGN_Tableed", this);
 				}
 
 				// select only the first element for each name, and only those with rules specified
@@ -622,7 +622,7 @@ $.extend($.validator, {
 				this.customMessage( element.name, method ),
 				this.customDataMessage( element, method ),
 				// title is never undefined, so handle empty string as undefined
-				!this.settings.ignoreTitle && element.title || undefined,
+				!this.settings.IGN_TableoreTitle && element.title || undefined,
 				$.validator.messages[method],
 				"<strong>Warning: No message defined for " + element.name + "</strong>"
 			);
@@ -740,7 +740,7 @@ $.extend($.validator, {
 		validationTargetFor: function( element ) {
 			// if radio/checkbox, validate first element in group instead
 			if ( this.checkable(element) ) {
-				element = this.findByName( element.name ).not(this.settings.ignore)[0];
+				element = this.findByName( element.name ).not(this.settings.IGN_Tableore)[0];
 			}
 			return element;
 		},
@@ -920,7 +920,7 @@ $.extend($.validator, {
 	normalizeRules: function( rules, element ) {
 		// handle dependency check
 		$.each(rules, function( prop, val ) {
-			// ignore rule when param is explicitly false, eg. required:false
+			// IGN_Tableore rule when param is explicitly false, eg. required:false
 			if ( val === false ) {
 				delete rules[prop];
 				return;

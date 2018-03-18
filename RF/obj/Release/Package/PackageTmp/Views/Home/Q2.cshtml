@@ -3,7 +3,7 @@
 @model IEnumerable<hw7.IGN_Table>
 
 @{
-    ViewBag.Title = "Q1";
+    ViewBag.Title = "Q2";
 }
 
 @{
@@ -19,12 +19,12 @@
     </tr>
     @foreach (var item in Model)
     {
-    <tr>
-        <td>@Html.DisplayFor(modelItem => item.Title)</td>
-        <td>@Html.DisplayFor(modelItem => item.Platform)</td>
-        <td>@Html.DisplayFor(modelItem => item.Score)</td>
-        
-    </tr>
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+            <td>@Html.DisplayFor(modelItem => item.Platform)</td>
+            <td>@Html.DisplayFor(modelItem => item.Score)</td>
+
+        </tr>
     }
 </table>
 

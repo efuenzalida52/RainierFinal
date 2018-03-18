@@ -4,10 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5f45d5770a684209a272128cd60c82c4" Name="Diagram1">
-        <EntityTypeShape EntityType="RainierFinal.ign" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RainierFinal.steamspy" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RainierFinal.vg" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="603cec5223c6444e8bdd8fd9b93bc3a3" Name="Diagram1">
+        <EntityTypeShape EntityType="RainerModel.IGN_Table" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RainerModel.Steamspy_Table" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RainerModel.VGSales_Table" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="RainerModel.FK_IGN_Table_VGSales_Table" ManuallyRouted="false" />
+        <AssociationConnector Association="RainerModel.FK_Steamspy_Table_VGSales_Table" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

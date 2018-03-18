@@ -1476,7 +1476,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	documentIsHTML = !isXML( doc );
 
 	// Support: IE>8
-	// If iframe document is assigned to "document" variable and if iframe has been reloaded,
+	// If iframe document is assIGN_Tableed to "document" variable and if iframe has been reloaded,
 	// IE will throw "permission denied" error when accessing "document" variable, see jQuery #13936
 	// IE6-8 do not support the defaultView property so parent will be undefined
 	if ( parent && parent.attachEvent && parent !== parent.top ) {
@@ -1634,7 +1634,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// ^= $= *= and empty values
 			// Should not select anything
 			// Support: Windows 8 Native Apps
-			// The type attribute is restricted during .innerHTML assignment
+			// The type attribute is restricted during .innerHTML assIGN_Tablement
 			var input = doc.createElement("input");
 			input.setAttribute( "type", "hidden" );
 			div.appendChild( input ).setAttribute( "t", "" );
@@ -1968,9 +1968,9 @@ Expr = Sizzle.selectors = {
 				2 what (child|of-type)
 				3 argument (even|odd|\d*|\d*n([+-]\d+)?|...)
 				4 xn-component of xn+y argument ([+-]?\d*n|)
-				5 sign of xn-component
+				5 sIGN_Table of xn-component
 				6 x of xn-component
-				7 sign of y-component
+				7 sIGN_Table of y-component
 				8 y of y-component
 			*/
 			match[1] = match[1].toLowerCase();
@@ -2173,7 +2173,7 @@ Expr = Sizzle.selectors = {
 				return fn( argument );
 			}
 
-			// But maintain support for old signatures
+			// But maintain support for old sIGN_Tableatures
 			if ( fn.length > 1 ) {
 				args = [ pseudo, pseudo, "", argument ];
 				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
@@ -2920,7 +2920,7 @@ function select( selector, context, results, seed ) {
 	return results;
 }
 
-// One-time assignments
+// One-time assIGN_Tablements
 
 // Sort stability
 support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
@@ -3710,7 +3710,7 @@ function internalRemoveData( elem, name, pvt ) {
 				}
 			} else {
 				// If "name" is an array of keys...
-				// When data is initially created, via ("key", "val") signature,
+				// When data is initially created, via ("key", "val") sIGN_Tableature,
 				// keys will be converted to camelCase.
 				// Since there is no way to tell _how_ a key was added, remove
 				// both plain key and camelCase key. #12786
@@ -4012,7 +4012,7 @@ jQuery.fn.extend({
 		});
 	},
 	// Based off of the plugin by Clint Helfers, with permission.
-	// http://blindsignals.com/index.php/2009/07/jquery-delay/
+	// http://blindsIGN_Tableals.com/index.php/2009/07/jquery-delay/
 	delay: function( time, type ) {
 		time = jQuery.fx ? jQuery.fx.speeds[ time ] || time : time;
 		type = type || "fx";
@@ -6837,7 +6837,7 @@ function vendorPropName( style, name ) {
 
 	// check for vendor prefixed names
 	var capName = name.charAt(0).toUpperCase() + name.slice(1),
-		origName = name,
+		orIGN_Tableame = name,
 		i = cssPrefixes.length;
 
 	while ( i-- ) {
@@ -6847,7 +6847,7 @@ function vendorPropName( style, name ) {
 		}
 	}
 
-	return origName;
+	return orIGN_Tableame;
 }
 
 function isHidden( elem, el ) {
@@ -7000,14 +7000,14 @@ jQuery.extend({
 
 		// Make sure that we're working with the right name
 		var ret, type, hooks,
-			origName = jQuery.camelCase( name ),
+			orIGN_Tableame = jQuery.camelCase( name ),
 			style = elem.style;
 
-		name = jQuery.cssProps[ origName ] || ( jQuery.cssProps[ origName ] = vendorPropName( style, origName ) );
+		name = jQuery.cssProps[ orIGN_Tableame ] || ( jQuery.cssProps[ orIGN_Tableame ] = vendorPropName( style, orIGN_Tableame ) );
 
 		// gets hook for the prefixed version
 		// followed by the unprefixed version
-		hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ];
+		hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ orIGN_Tableame ];
 
 		// Check if we're setting a value
 		if ( value !== undefined ) {
@@ -7026,7 +7026,7 @@ jQuery.extend({
 			}
 
 			// If a number was passed in, add 'px' to the (except for certain CSS properties)
-			if ( type === "number" && !jQuery.cssNumber[ origName ] ) {
+			if ( type === "number" && !jQuery.cssNumber[ orIGN_Tableame ] ) {
 				value += "px";
 			}
 
@@ -7059,14 +7059,14 @@ jQuery.extend({
 
 	css: function( elem, name, extra, styles ) {
 		var num, val, hooks,
-			origName = jQuery.camelCase( name );
+			orIGN_Tableame = jQuery.camelCase( name );
 
 		// Make sure that we're working with the right name
-		name = jQuery.cssProps[ origName ] || ( jQuery.cssProps[ origName ] = vendorPropName( elem.style, origName ) );
+		name = jQuery.cssProps[ orIGN_Tableame ] || ( jQuery.cssProps[ orIGN_Tableame ] = vendorPropName( elem.style, orIGN_Tableame ) );
 
 		// gets hook for the prefixed version
 		// followed by the unprefixed version
-		hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ];
+		hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ orIGN_Tableame ];
 
 		// If a hook was provided get the computed value from there
 		if ( hooks && "get" in hooks ) {
@@ -7887,7 +7887,7 @@ jQuery.extend({
 	// Main method
 	ajax: function( url, options ) {
 
-		// If url is an object, simulate pre-1.5 signature
+		// If url is an object, simulate pre-1.5 sIGN_Tableature
 		if ( typeof url === "object" ) {
 			options = url;
 			url = undefined;
@@ -8010,7 +8010,7 @@ jQuery.extend({
 
 		// Remove hash character (#7531: and string promotion)
 		// Add protocol if not provided (#5866: IE7 issue with protocol-less urls)
-		// Handle falsy url in the settings object (#10093: consistency with old signature)
+		// Handle falsy url in the settings object (#10093: consistency with old sIGN_Tableature)
 		// We also use the url parameter if available
 		s.url = ( ( url || s.url || ajaxLocation ) + "" ).replace( rhash, "" ).replace( rprotocol, ajaxLocParts[ 1 ] + "//" );
 
