@@ -238,6 +238,9 @@
     <Content Include="Views\Home\GetDetails.cshtml" />
     <Content Include="Views\Home\Q2.cshtml" />
     <Content Include="Views\Home\Q3.cshtml" />
+    <Content Include="Views\Home\Q4.cshtml" />
+    <Content Include="Views\Home\Q5.cshtml" />
+    <Content Include="Views\Home\Q6.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

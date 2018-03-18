@@ -71,48 +71,54 @@ namespace hw7.Controllers
         {
 
             RainierEntities model = new RainierEntities();
-            ViewBag.Message = "Query Two: What are the platform(s) for top 5 selling games in ea.area?";
+            ViewBag.Message = "Query 4: Of Top 10 games in NA What were the different ratings?";
+            //SELECT TOP 10 VGSales_Table.Title, NA_Sales, SteamSpy_Table.Score, IGN_Table.Score from VGSales_Table JOIN SteamSpy_Table ON VGSales_Table.Title = SteamSpy_Table.Title JOIN IGN_Table ON SteamSpy_Table.Title = IGN_Table.Title;
 
-            var query2 = (from ign in model.igns
+            var query4 = (from ign in model.igns
                           join vg in model.vgs on ign.Title equals vg.Title
                           join steamspy in model.steamspies on vg.Title equals steamspy.Title
-                          select ign).Take(10);
+                          orderby steamspy.Average_Score_Rank descending
+                          select steamspy).Take(10);
 
-            List<ign> IGNList = query2.ToList();
+            List<steamspy> SteamList = query4.ToList();
 
-            return View(IGNList);
+            return View(SteamList);
         }
 
         public ActionResult Q5()
         {
 
             RainierEntities model = new RainierEntities();
-            ViewBag.Message = "Query Two: What are the platform(s) for top 5 selling games in ea.area?";
+            ViewBag.Message = "Query 5: How many of the top 10 (# sold) titles are Valve games?";
+            //SELECT TOP 10 Title, NA_Sales, EU_Sales, Japan_Sales, Other_Sales, Global_Sales  FROM VGSales_Table JOIN SteamSpy_Table ON VGSales_Table.Title = SteamSpy_Table.Title WHERE Publisher LIKE “Valve”;
 
-            var query2 = (from ign in model.igns
-                          join vg in model.vgs on ign.Title equals vg.Title
-                          join steamspy in model.steamspies on vg.Title equals steamspy.Title
-                          select ign).Take(10);
+            var query5 = (from steamspy in model.steamspies
+                          join vg in model.vgs on steamspy.Title equals vg.Title
+                          where vg.Publisher.Contains("Valve")
+                          orderby vg.Global_Sales descending
+                          select vg).Take(10);
 
-            List<ign> IGNList = query2.ToList();
+            List<vg> VGList = query5.ToList();
 
-            return View(IGNList);
+            return View(VGList);
         }
 
         public ActionResult Q6()
         {
 
             RainierEntities model = new RainierEntities();
-            ViewBag.Message = "Query Two: What are the platform(s) for top 5 selling games in ea.area?";
+            ViewBag.Message = "Query 6:  What genre has sold the most copies?";
+            //SELECT VGSales_Table.Genre, COUNT (VGSales_Table.Genre) AS Genre_Popularity, NA_Sales, EU_Sales, Japan_Sales, Other_Sales, Global_Sales  FROM VGSales_Table GROUP BY VGSales_Table.Genre ORDER BY Genre_Popularity DESC LIMIT 1;
 
-            var query2 = (from ign in model.igns
-                          join vg in model.vgs on ign.Title equals vg.Title
-                          join steamspy in model.steamspies on vg.Title equals steamspy.Title
-                          select ign).Take(10);
 
-            List<ign> IGNList = query2.ToList();
+            var query6 = (from vg in model.vgs
+                          //group vg.Genre by vg.Genre into Genre_Popularity
+                          orderby vg.Genre.Count() descending
+                          select vg).Take(1);
 
-            return View(IGNList);
+            List<vg> VGList = query6.ToList();
+
+            return View(VGList);
         }
 
         public ActionResult Q7()
@@ -147,31 +153,5 @@ namespace hw7.Controllers
             return View(IGNList);
         }
 
-
-        /*       public ActionResult Contact()
-               {
-                   NodeOrdersEntities model = new NodeOrdersEntities();
-                   var query = from cd in model.CDTables
-                               where cd.ListPrice > 10
-                               select cd;
-                   List<CDTable> list = query.ToList();
-
-                   return View(list);
-               }
-
-               [HttpGet]
-               public ActionResult GetDetails(int? id)
-               {
-                   NodeOrdersEntities model = new NodeOrdersEntities();
-                   var query = (from person in model.SalesPersonTables
-                                from order in person.Orders
-                                where order.CdID == id
-                                select person).Distinct().Take(20);
-                   List<SalesPersonTable> DetailsList = query.ToList();
-                   ViewBag.ID = id;
-                   return View(DetailsList);
-
-               }
-               */
     }
 }
