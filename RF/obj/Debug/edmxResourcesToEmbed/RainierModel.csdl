@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RainierFinal" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ign">
+    <Key>
+      <PropertyRef Name="Title" />
+    </Key>
+    <Property Name="ID" Type="Double" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Score" Type="Double" />
+    <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Double" />
+    <Property Name="Month" Type="Double" />
+    <Property Name="Day" Type="Double" />
+  </EntityType>
+  <EntityType Name="steamspy">
+    <Key>
+      <PropertyRef Name="Title" />
+    </Key>
+    <Property Name="ID" Type="Double" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Month" Type="Double" />
+    <Property Name="Day" Type="Double" />
+    <Property Name="Year" Type="Double" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Average_Score_Rank" Type="Double" />
+    <Property Name="User_Score" Type="Double" />
+    <Property Name="Metacritic_Score" Type="Double" />
+    <Property Name="Estimated_Owners" Type="Double" />
+    <Property Name="Average_Playtime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Developer_s_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Publisher_s_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Game_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vg">
+    <Key>
+      <PropertyRef Name="Title" />
+    </Key>
+    <Property Name="ID" Type="Double" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="Double" Nullable="false" />
+    <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Publisher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NA_Sales" Type="Double" />
+    <Property Name="EU_Sales" Type="Double" />
+    <Property Name="JP_Sales" Type="Double" />
+    <Property Name="Other_Sales" Type="Double" />
+    <Property Name="Global_Sales" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="RainierEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="igns" EntityType="Self.ign" />
+    <EntitySet Name="steamspies" EntityType="Self.steamspy" />
+    <EntitySet Name="vgs" EntityType="Self.vg" />
+  </EntityContainer>
+</Schema>

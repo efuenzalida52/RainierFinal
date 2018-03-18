@@ -1,0 +1,32 @@
+﻿@* The @model directive provides a cleaner and more concise way to reference
+    strongly-typed models from view files.*@
+@model IEnumerable<hw7.CDTable>
+
+@{
+    ViewBag.Title = "About";
+}
+
+@{
+    string modelinfo = Model.ToString();
+}
+<h2>@ViewBag.Title</h2>
+<table class="table">
+    <tr>
+        <th>
+            CD Name:   Artist:     CD Id:
+        </th>
+    </tr>
+    @foreach (CDTable item in Model)
+    // Model gets the Model Property of the ViewDataDictionary object
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CDname)
+                @Html.DisplayFor(modelItem => item.Artist)
+                @Html.DisplayFor(modelItem => item.CdID)
+                @Html.ActionLink("Pick", "GetDetails", new { id = item.CdID })
+
+            </td>
+        </tr>
+    }
+</table>

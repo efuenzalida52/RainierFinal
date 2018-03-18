@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeamRainierModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'TeamRainier.dbo.ign' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ign">
+          <Property Name="ID" Type="int" />
+          <Property Name="Title" Type="varchar" MaxLength="20" />
+          <Property Name="Platform" Type="varchar" MaxLength="20" />
+          <Property Name="Score" Type="int" />
+          <Property Name="Genre" Type="varchar" MaxLength="20" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Day" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'TeamRainier.dbo.steamspy' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="steamspy">
+          <Property Name="ID" Type="int" />
+          <Property Name="Title" Type="varchar" MaxLength="20" />
+          <Property Name="ReleaseDate" Type="datetime" />
+          <Property Name="Price" Type="money" />
+          <Property Name="ScoreRank" Type="int" />
+          <Property Name="Owners" Type="varchar" MaxLength="20" />
+          <Property Name="Playtime" Type="int" />
+          <Property Name="Developer" Type="varchar" MaxLength="20" />
+          <Property Name="Publisher" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'TeamRainier.dbo.vg' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vg">
+          <Property Name="ID" Type="int" />
+          <Property Name="Title" Type="varchar" MaxLength="20" />
+          <Property Name="Platform" Type="varchar" MaxLength="20" />
+          <Property Name="ReleaseYear" Type="int" />
+          <Property Name="Genre" Type="varchar" MaxLength="20" />
+          <Property Name="Publisher" Type="varchar" MaxLength="20" />
+          <Property Name="NASales" Type="float" />
+          <Property Name="EUSales" Type="float" />
+          <Property Name="JPSales" Type="float" />
+          <Property Name="OtherSales" Type="float" />
+          <Property Name="GlobalSales" Type="float" />
+        </EntityType>-->
+  <EntityContainer Name="TeamRainierModelStoreContainer" />
+</Schema>

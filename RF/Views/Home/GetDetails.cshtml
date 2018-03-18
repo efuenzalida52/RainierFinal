@@ -1,0 +1,27 @@
+﻿@model IEnumerable<hw7.SalesPersonTable>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Sales Person Name:    Store Number:    CD ID:
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    // Model gets the Model Property of the ViewDataDictionary object
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(modelItem => item.StoreNumberID)
+                @ViewBag.ID
+
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RainierFinal.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ign">
+    <Key>
+      <PropertyRef Name="Title" />
+    </Key>
+    <Property Name="ID" Type="float" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Platform" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Score" Type="float" />
+    <Property Name="Genre" Type="nvarchar" MaxLength="255" />
+    <Property Name="Year" Type="float" />
+    <Property Name="Month" Type="float" />
+    <Property Name="Day" Type="float" />
+  </EntityType>
+  <EntityType Name="steamspy">
+    <Key>
+      <PropertyRef Name="Title" />
+    </Key>
+    <Property Name="ID" Type="float" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Platform" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Month" Type="float" />
+    <Property Name="Day" Type="float" />
+    <Property Name="Year" Type="float" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Average Score Rank" Type="float" />
+    <Property Name="User Score" Type="float" />
+    <Property Name="Metacritic Score" Type="float" />
+    <Property Name="Estimated Owners" Type="float" />
+    <Property Name="Average Playtime" Type="nvarchar" MaxLength="255" />
+    <Property Name="Developer(s)" Type="nvarchar" MaxLength="255" />
+    <Property Name="Publisher(s)" Type="nvarchar" MaxLength="255" />
+    <Property Name="Game ID" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="vg">
+    <Key>
+      <PropertyRef Name="Title" />
+    </Key>
+    <Property Name="ID" Type="float" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Platform" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Year" Type="float" Nullable="false" />
+    <Property Name="Genre" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Publisher" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NA_Sales" Type="float" />
+    <Property Name="EU_Sales" Type="float" />
+    <Property Name="JP_Sales" Type="float" />
+    <Property Name="Other_Sales" Type="float" />
+    <Property Name="Global_Sales" Type="float" />
+  </EntityType>
+  <EntityContainer Name="RainierFinalStoreContainer">
+    <EntitySet Name="ign" EntityType="Self.ign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="steamspy" EntityType="Self.steamspy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vg" EntityType="Self.vg" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

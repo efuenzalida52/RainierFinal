@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RainierFinalStoreContainer" CdmEntityContainer="RainierEntities">
+    <EntitySetMapping Name="igns">
+      <EntityTypeMapping TypeName="RainierFinal.ign">
+        <MappingFragment StoreEntitySet="ign">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="steamspies">
+      <EntityTypeMapping TypeName="RainierFinal.steamspy">
+        <MappingFragment StoreEntitySet="steamspy">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Average_Score_Rank" ColumnName="Average Score Rank" />
+          <ScalarProperty Name="User_Score" ColumnName="User Score" />
+          <ScalarProperty Name="Metacritic_Score" ColumnName="Metacritic Score" />
+          <ScalarProperty Name="Estimated_Owners" ColumnName="Estimated Owners" />
+          <ScalarProperty Name="Average_Playtime" ColumnName="Average Playtime" />
+          <ScalarProperty Name="Developer_s_" ColumnName="Developer(s)" />
+          <ScalarProperty Name="Publisher_s_" ColumnName="Publisher(s)" />
+          <ScalarProperty Name="Game_ID" ColumnName="Game ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vgs">
+      <EntityTypeMapping TypeName="RainierFinal.vg">
+        <MappingFragment StoreEntitySet="vg">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="NA_Sales" ColumnName="NA_Sales" />
+          <ScalarProperty Name="EU_Sales" ColumnName="EU_Sales" />
+          <ScalarProperty Name="JP_Sales" ColumnName="JP_Sales" />
+          <ScalarProperty Name="Other_Sales" ColumnName="Other_Sales" />
+          <ScalarProperty Name="Global_Sales" ColumnName="Global_Sales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

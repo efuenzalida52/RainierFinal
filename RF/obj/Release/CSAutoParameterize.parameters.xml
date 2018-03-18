@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="RainierEntities-Web.config Connection String" description="RainierEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/RainierModel.csdl|res://*/RainierModel.ssdl|res://*/RainierModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-8G60T7I;initial catalog=TeamRainier;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\etsun\\source\\repos\\RainierFinal2\\RF\\RF\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RainierEntities']/@connectionString" />
+  </parameter>
+</parameters>
